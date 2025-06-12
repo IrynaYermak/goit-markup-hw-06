@@ -447,17 +447,20 @@ ol {
 }
 
 .footer {
-  padding: 100px 0;
+  /* padding: 100px 0; */
+  padding: 96px 0;
 }
 
 .footer .container {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+  align-items: center;
+  gap: 72px;
   /* gap: 120px; */
 }
 
 .footer-container {
-  margin-right: 120px;
+  /* margin-right: 120px; */
 }
 .footer .social-link-list {
   gap: 16px;
@@ -474,6 +477,9 @@ ol {
 
 .footer-logo {
   display: inline-block;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
   margin-bottom: 16px;
 }
 
@@ -485,6 +491,7 @@ ol {
   letter-spacing: 0.02em;
   color: #fff;
   margin-bottom: 16px;
+  text-align: center;
 }
 
 .footer .social-link:hover,
@@ -493,27 +500,35 @@ ol {
 }
 
 .footer-link-container {
-  margin-right: 80px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* margin-right: 80px; */
 }
 
 .subscribe-form {
   display: flex;
-  flex-direction: row;
-  gap: 24px;
+  flex-direction: column;
+  align-items: center;
+  /* gap: 24px; */
+  gap: 16px;
 }
 
 .subscribe-input {
   border: 1px solid #fff;
   border-radius: 4px;
-  width: 264px;
+  /* width: 264px; */
+  width: 288px;
   height: 40px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   padding: 8px 16px;
   background-color: transparent;
+  opacity: 0.3;
   font-size: 12px;
   line-height: 2;
   letter-spacing: 0.04em;
   color: #fff;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .subscribe-input::placeholder {
@@ -524,10 +539,15 @@ ol {
   color: #fff;
 }
 
+.subscribe-input:focus {
+  outline: none;
+  border: 1px solid #4d5ae5;
+}
+
 .subscribe-btn {
   border-radius: 4px;
   padding: 8px 24px;
-  min-width: 165px;
+  max-width: 165px;
   height: 40px;
   background-color: #4d5ae5;
   color: #fff;
@@ -862,6 +882,38 @@ textarea.form-field {
   .portfolio-item {
     width: calc((100% - 24px) / 2);
   }
+
+  .footer .container {
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding-left: 108px;
+    gap: 72px 24px;
+  }
+
+  .footer-logo {
+    justify-content: start;
+  }
+
+  .footer-link-title {
+    text-align: start;
+  }
+
+  .subscribe-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .subscribe-form {
+    flex-direction: row;
+    align-items: start;
+    gap: 24px;
+  }
+
+  .subscribe-input {
+    width: 264px;
+  }
 }
 
 @media screen and (min-width: 1158px) {
@@ -959,5 +1011,30 @@ textarea.form-field {
 
   .portfolio-item {
     width: calc((100% - 48px) / 3);
+  }
+
+  .footer {
+    padding: 100px 0;
+  }
+
+  .footer .container {
+    flex-direction: row;
+    align-items: flex-start;
+    padding-left: 0;
+    gap: 0;
+  }
+
+  .footer-container {
+    margin-right: 120px;
+  }
+
+  .footer-link-container {
+    display: flex;
+    flex-direction: column;
+    margin-right: 80px;
+  }
+
+  .subscribe-input {
+    opacity: 1;
   }
 }
