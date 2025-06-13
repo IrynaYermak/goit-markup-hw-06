@@ -58,6 +58,69 @@
           </svg>
         </button>
       </div>
+
+      <div class="mob-menu">
+        <button type="button" class="mob-menu-close-btn">
+          <svg class="close-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <nav class="mob-menu-nav">
+          <ul class="mob-menu-nav-list">
+            <li class="mob-menu-nav-item current">Studio</li>
+            <li class="mob-menu-nav-item">Portfolio</li>
+            <li class="mob-menu-nav-item">Contacts</li>
+          </ul>
+        </nav>
+
+        <address class="mob-menu-contacts">
+          <ul class="mob-menu-contacts-list">
+            <li class="mob-menu-contacts-item">
+              <a
+                class="mob-menu-contacts-link current"
+                href="mailto:info@devstudio.com"
+                >info@devstudio.com
+              </a>
+            </li>
+            <li class="mob-menu-contacts-item">
+              <a class="mob-menu-contacts-link" href="tel:+110001111111"
+                >+11 (000) 111-11-11
+              </a>
+            </li>
+          </ul>
+        </address>
+
+        <ul class="social-link-list">
+          <li class="social-link-item">
+            <a class="social-link" target="_blank" href="">
+              <svg class="social-link-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-link-item">
+            <a class="social-link" target="_blank" href="">
+              <svg class="social-link-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-link-item">
+            <a class="social-link" target="_blank" href="">
+              <svg class="social-link-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-link-item">
+            <a class="social-link" target="_blank" href="">
+              <svg class="social-link-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-linkedin-1"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
     </header>
     <main>
       <section class="hero-section section">
@@ -496,7 +559,7 @@
       </div>
     </footer>
 
-    <div class="modal-backdrop">
+    <div class="modal-backdrop is-open">
       <div class="modal">
         <button type="button" class="close-btn">
           <svg class="close-icon" width="8" height="8">
@@ -560,14 +623,17 @@
               value="true"
               class="input-box visually-hidden"
             />
+
             <label for="user-privacy" class="consent-caption">
               <span class="consent-visible">
                 <svg class="consent-icon" width="10" height="8">
                   <use href="./images/icons.svg#icon-checked"></use>
                 </svg>
               </span>
-              I accept the terms and conditions of the
-              <a href="./" class="form-link">Privacy Policy</a>
+              <span>
+                I accept the terms and conditions of the
+                <a href="./" class="form-link">Privacy Policy</a>
+              </span>
             </label>
           </div>
 
