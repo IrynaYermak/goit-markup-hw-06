@@ -178,8 +178,9 @@ ol {
   width: 100vh;
   max-width: 320px;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   top: 0;
+  z-index: 1;
   background-color: #fff;
   display: flex;
   flex-direction: column;
@@ -936,7 +937,7 @@ textarea.form-field {
 
   .team-section .container {
     max-width: 768px;
-    padding: 0 16px;
+    padding: 0 108px;
   }
 
   .team-list {
